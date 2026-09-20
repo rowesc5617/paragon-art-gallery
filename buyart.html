@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Buy Art</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="TheParagon.css">
+    </head>
+<body>
+
+<div class="page-container">
+
+<!-- COLUMN 1: NAVIGATION -->
+<nav class="sidebar-nav">
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    &#9776; Menu
+  </button>
+
+  <div class="nav-content">
+    <div class="user-actions">
+      <a href="signin.html" class="btn-action">Sign In</a>
+      <a href="cart.html" class="btn-action">Cart</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="supplies.html">Supplies</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rentspace.html">Rent Space</a></li>
+      <li><a href="buyart.html" class="active">Buy Art</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- COLUMN 2: MAIN CONTENT -->
+<main class="content">
+    <div class="header-box">
+        <h1>Buy Art</h1>
+    </div>
+
+    <div class="text-box">
+        <p>Explore original works available for purchase directly from our featured artists.</p>
+    </div>
+
+    <!-- ARTWORK SECTIONS CONTAINER -->
+    <div class="buy-art-list" style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+      
+      <!-- Artwork 1 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Whispers of Nature" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Whispers of Nature</h3>
+          <p><strong>Medium:</strong> Oil on stretched canvas</p>
+          <p><strong>Price:</strong> $450.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Whispers of Nature" 
+              data-price="450.00" 
+              data-details="Oil on stretched canvas">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Artwork 2 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Solitude in Bloom" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Solitude in Bloom</h3>
+          <p><strong>Medium:</strong> Acrylic and gold leaf on panel</p>
+          <p><strong>Price:</strong> $320.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Solitude in Bloom" 
+              data-price="320.00" 
+              data-details="Acrylic and gold leaf on panel">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Artwork 3 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Urban Reflection" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Urban Reflection</h3>
+          <p><strong>Medium:</strong> Watercolor and archival ink on cold-press paper</p>
+          <p><strong>Price:</strong> $275.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Urban Reflection" 
+              data-price="275.00" 
+              data-details="Watercolor and archival ink on paper">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Artwork 4 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Geometric Harmony" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Geometric Harmony</h3>
+          <p><strong>Medium:</strong> Mixed media collage on birch wood board</p>
+          <p><strong>Price:</strong> $510.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Geometric Harmony" 
+              data-price="510.00" 
+              data-details="Mixed media collage on birch wood board">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Artwork 5 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Silent Shoreline" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Silent Shoreline</h3>
+          <p><strong>Medium:</strong> Soft pastel on toned paper</p>
+          <p><strong>Price:</strong> $195.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Silent Shoreline" 
+              data-price="195.00" 
+              data-details="Soft pastel on toned paper">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Artwork 6 -->
+      <div class="art-card" style="border: 1px solid #ccc; padding: 1.25rem; border-radius: 8px; background-color: rgba(255,255,255,0.15); display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+        <img src="comingsoon.jpg" alt="Vibrant Motion" style="max-width: 200px; width: 100%; height: auto; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; min-width: 220px;">
+          <h3 style="margin-top: 0;">Vibrant Motion</h3>
+          <p><strong>Medium:</strong> Cast bronze sculpture with hand-applied patina</p>
+          <p><strong>Price:</strong> $850.00</p>
+          <button class="add-to-cart-btn" 
+              data-name="Vibrant Motion" 
+              data-price="850.00" 
+              data-details="Cast bronze sculpture with patina">
+             Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </div>
+</main>
+
+<!-- COLUMN 3: THUMBNAIL GALLERY -->
+<aside class="gallery-sidebar">
+  <img src="face.jpg" alt="Artwork with realistic female face shape but the edges blend into scenes of nature.">
+  <img src="tree.jpg" alt="Artwork depicting a prominent tree shape with wavy lines, brown trunk, orange leaves, and subdued background.">
+  <img src="rainbow.jpg" alt="A muddled face shape inside of what looks like a droplet covered window with a rainbow color scheme.">
+  <img src="abstract.jpg" alt="Artwork with bright geometric shapes and abstract faces using a complementary color scheme.">
+  <img src="materials.jpg" alt="An image of a paintbrush, paint knife, and paints on paint-stained wood.">
+  <img src="field.jpg" alt="Artwork depicting a dull, subdued colored field with broad brush strokes showing green/yellow foliage and gray sky.">
+  <img src="bird.jpg" alt="Artwork depicting two peacock-looking birds with bright yellow/red feathers in stained-glass style.">
+  <img src="building.jpg" alt="Artwork depicting an historic building with clocktower segment and stone statue in front.">
+  <img src="redtree.jpg" alt="Artwork depicting seven round-topped trees on a yellow background with white sun in the center.">
+  <img src="toucan.jpg" alt="Artwork depicting a toucan bird with brightly colored segments and unusual patterns.">
+  <img src="flower.jpg" alt="Artwork depicting two flowers with blue and yellow radial petals on a red background.">
+  <img src="woman.jpg" alt="Artwork of a woman with yellow skin, yellow background, red dress, and angular lines.">
+</aside>
+
+<footer class="studio">
+    <p>The Paragon Art Gallery &bull; 123 Main Street, Suite A, Tampa, FL 33602 &bull; Phone: (813) 555-0123 &bull; Email: info@paragonartgallery.com</p>
+    <p>&copy; 2026 The Paragon Art Gallery. All rights reserved.</p>
+</footer>
+
+</div> <!-- End .page-container -->
+
+<!-- CONSOLIDATED JAVASCRIPT -->
+<script>
+  // Helper function: Add item to localStorage cart
+  function addToCart(newItem) {
+    const cart = JSON.parse(localStorage.getItem('paragonCart')) || [];
+    
+    const existingItem = cart.find(item => item.name === newItem.name);
+    if (existingItem) {
+      existingItem.quantity += newItem.quantity || 1;
+    } else {
+      cart.push({
+        name: newItem.name,
+        price: newItem.price,
+        quantity: newItem.quantity || 1,
+        details: newItem.details || ''
+      });
+    }
+    
+    localStorage.setItem('paragonCart', JSON.stringify(cart));
+    alert(`${newItem.name} has been added to your cart.`);
+  }
+
+  // Event Listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navContent = document.querySelector('.nav-content');
+
+    if (menuToggle && navContent) {
+      menuToggle.addEventListener('click', () => {
+        navContent.classList.toggle('is-open');
+      });
+    }
+
+    // 2. Add to Cart Listeners
+    const cartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    cartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const name = button.getAttribute('data-name');
+        const price = parseFloat(button.getAttribute('data-price'));
+        const details = button.getAttribute('data-details') || '';
+
+        addToCart({
+          name: name,
+          price: price,
+          quantity: 1,
+          details: details
+        });
+      });
+    });
+
+    // 3. Thumbnail Gallery Expansion
+    const galleryImages = document.querySelectorAll('.gallery-sidebar img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = img.classList.contains('expanded');
+        galleryImages.forEach(i => i.classList.remove('expanded'));
+        if (!isExpanded) {
+          img.classList.add('expanded');
+        }
+      });
+    });
+
+    document.addEventListener('click', () => {
+      galleryImages.forEach(i => i.classList.remove('expanded'));
+    });
+
+  });
+</script>
+
+</body>
+</html>
