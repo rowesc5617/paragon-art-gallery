@@ -1,0 +1,539 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(54, 31, 0), rgb(255, 208, 0));
+  color: #40407A;
+  font-family: Arial, sans-serif, Verdana;
+  margin: 0;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* ------------------------------ PAGE LAYOUT ------------------------------ */
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+/* ------------------------------ COLUMN 1: NAVIGATION SIDEBAR ------------------------------ */
+.sidebar-nav {
+  width: 18vw;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-left: 20px;
+}
+
+/* HIDE HAMBURGER NAV ON DESKTOP BY DEFAULT */
+.menu-toggle {
+  display: none; 
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+/* SIGN IN & CART BUTTON WRAPPER */
+.user-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.user-actions .btn-action {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #3F2860 !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  border: 3px solid #2c2c2c;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-actions .btn-action.active {
+  background-color: #3F2860;
+  color: #FFFFFF !important;
+  border-color: #3F2860;
+}
+
+.user-actions .btn-action:hover {
+  background-color: #3F2860;
+  border-color: #3F2860;
+  color: #FFFFFF !important;
+  transform: scale(1.03);
+}
+
+/* NAVIGATION LINKS LIST */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 1.15em;
+  font-weight: bold;
+  border: 3px solid #2c2c2c;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #3F2860;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links a:visited {
+  color: #3F2860;
+}
+
+.nav-links a:hover {
+  background-color: #3F2860;
+  color: #FFFFFF !important;
+  transform: scale(1.03);
+}
+
+.nav-links a.active {
+  background-color: #3F2860;
+  color: #FFFFFF !important;
+  border-color: #3F2860;
+}
+
+/* ------------------------------ COLUMN 2: CENTER CONTENT AREA ------------------------------ */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header-box {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #3F2860;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.header-box h1 {
+  font-family: "Viner Hand ITC", cursive;
+  font-size: 3em;
+  margin: 5px 0;
+}
+
+.header-box h2 {
+  font-family: "Viner Hand ITC", cursive;
+  font-size: 2.2em;
+  margin: 5px 0;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border: 2px solid #3F2860;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.text-box {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 0;
+  padding: 10px;
+  border: 2px solid #3F2860;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.text-box h2 {
+  font-family: "Viner Hand ITC", cursive;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text-box p {
+  margin: 10px 20px;
+  color: #40407A;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+/* ------------------------------ COLUMN 3: THUMBNAIL GALLERY ------------------------------ */
+.gallery-sidebar {
+  width: auto;
+  min-width: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 20px;
+  padding: 20px;
+  align-content: center;
+  box-sizing: border-box;
+  margin-right: 30px;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+}
+
+.gallery-sidebar img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 2px solid #3F2860;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-sidebar img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-sidebar img.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 80vw;
+  height: 80vh;
+  object-fit: contain;
+  z-index: 1000;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ------------------------------ SIGN-IN CONTAINER ------------------------------ */
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.auth-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  color: #2b1f1d;
+}
+
+.signup-intro {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.auth-divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-self: stretch;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.form-group input:focus {
+  outline: 2px solid #553311;
+  border-color: transparent;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.forgot-link {
+  color: #2b1f1d;
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #4a3429;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #312119;
+}
+
+.btn-secondary {
+  background-color: #725847;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #554033;
+}
+
+/* ------------------------------ CART CONTAINER ------------------------------ */
+#cart-container {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 2px solid #3F2860;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.empty-cart-message {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  color: #3F2860;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(63, 40, 96, 0.2);
+  gap: 15px;
+}
+
+.cart-item-details {
+  text-align: left;
+  flex: 2;
+  color: #40407A;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-qty-input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #3F2860;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-weight: bold;
+  color: #3F2860;
+  min-width: 80px;
+  text-align: right;
+}
+
+.btn-remove {
+  background: #a82e2e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background: #7a1d1d;
+}
+
+/* ------------------------------ GALLERY CARDS ------------------------------ */
+.gallery-views-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-card {
+  border: 1px solid #ccc;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gallery-card img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.gallery-card-info {
+  flex: 1;
+  min-width: 220px;
+  text-align: left;
+}
+
+.gallery-card-info h3 {
+  margin-top: 0;
+  color: #3F2860;
+}
+
+/* ------------------------------ GENERAL / FOOTER ------------------------------ */
+section {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 10px;
+  margin-top: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 0.85em;
+  background-color: rgba(63, 40, 96, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+  margin: 5px 0;
+  color: #FFFFFF;
+}
+
+.studio {
+  font-style: italic;
+}
+
+/* ------------------------------ MEDIA QUERIES (MOBILE) ------------------------------ */
+@media (max-width: 767px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #3F2860;
+    color: #FFFFFF;
+    border: 2px solid #2c2c2c;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .nav-content {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .nav-content.is-open {
+    display: flex;
+  }
+
+  .gallery-sidebar {
+    position: static;
+    width: 100%;
+    margin-right: 0;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    min-height: auto;
+  }
+
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
